@@ -1,5 +1,4 @@
 using APIInjDependencias.Interfaces;
-using APIInjDependencias.Logging;
 using APIInjDependencias.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -39,8 +38,8 @@ namespace APIInjDependencias.Controllers
                 Construtor = _transientB.IdReferencia,
                 Action = transientB_Action.IdReferencia
             };
-            _logger.LogDI<TransientController>(resultado.ValoresA);
-            _logger.LogDI<TransientController>(resultado.ValoresB);
+            _logger.LogInformation(resultado.ValoresA.ToString());
+            _logger.LogInformation(resultado.ValoresB.ToString());
             return resultado;
         }
     }

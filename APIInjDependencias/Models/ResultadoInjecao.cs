@@ -1,6 +1,4 @@
-﻿using APIInjDependencias.Interfaces;
-
-namespace APIInjDependencias.Models;
+﻿namespace APIInjDependencias.Models;
 
 public class ResultadoInjecao
 {

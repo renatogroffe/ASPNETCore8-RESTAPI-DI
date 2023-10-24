@@ -1,5 +1,4 @@
 using APIInjDependencias.Interfaces;
-using APIInjDependencias.Logging;
 using APIInjDependencias.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -40,8 +39,8 @@ namespace APIInjDependencias.Controllers
                 Construtor = _scopedB.IdReferencia,
                 Action = scopedB_Action.IdReferencia
             };
-            _logger.LogDI<ScopedController>(resultado.ValoresA);
-            _logger.LogDI<ScopedController>(resultado.ValoresB);
+            _logger.LogInformation(resultado.ValoresA.ToString());
+            _logger.LogInformation(resultado.ValoresB.ToString());
             return resultado;
         }
     }

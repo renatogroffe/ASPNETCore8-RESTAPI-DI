@@ -1,5 +1,4 @@
 using APIInjDependencias.Interfaces;
-using APIInjDependencias.Logging;
 using APIInjDependencias.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -40,8 +39,8 @@ namespace APIInjDependencias.Controllers
                 Construtor = _singletonB.IdReferencia,
                 Action = singletonB_Action.IdReferencia
             };
-            _logger.LogDI<SingletonController>(resultado.ValoresA);
-            _logger.LogDI<SingletonController>(resultado.ValoresB);
+            _logger.LogInformation(resultado.ValoresA.ToString());
+            _logger.LogInformation(resultado.ValoresB.ToString());
             return resultado;
         }
     }
